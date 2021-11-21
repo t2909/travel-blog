@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<title>signup page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="D:\TANU\india blog\style2.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="bg-img">
+        <div class="content">
+            <header>Sign in</header>
+            <form action="#">
+            <div class="feild">
+                <span class="fa fa-user "></span>
+                <input type="text" required placeholder="Email or Phone">
+            </div>
+            <div class="feild space">
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span>
+                <input type="password" class="password" required placeholder="Password">
+                <span class="show">SHOW</span>
+            </div>
+       
+            
+            <div class="pass">
+                <a href="#">Forgot password</a>
+            </div>
+            <div class="feild">
+             <input type="submit" value="SIGN IN ">
+            </div>
+            
+            
+           
+            </form>
+        </div>
+    </div>
+    <script>
+        const pass_feild = document.querySelector('.password');
+        const show_btn = document.querySelector('.show');
+        pass_feild.addEventListener('click',function(){
+            if(pass_feild.type === "password"){
+              pass_feild.type ="text"; 
+            show_btn.style.color= "#3498db"; 
+            show_btn.textContent = "HIDE";
+            }else{
+                pass_feild.type = "password";
+                show_btn.style.color ="#222";
+                show_btn.textContent ="SHOW";
+            }
+        });
+    </script>
+</body>
+</html>

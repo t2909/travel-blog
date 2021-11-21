@@ -1,0 +1,33 @@
+
+
+body
+{
+margin:0px;
+padding: 0px;
+background-color: #ffff;
+}
+a{
+    text-decoration: none;
+}
+.social a
+{
+    padding: 20px;
+    color:#7b7c7c;
+    font-size: 1.1rem;
+}
+#contact
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.social
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<style media="screen">
+    body{
+        margin: 0;
+        padding: 0;
+        background: #111;
+    }
+    #contact
+    {
+        width: 100%;
+        height: 100vh;
+        background: #111;
+        overflow: hidden;
+        padding-bottom: 200px;
+    }
+    .section-header
+    {
+        text-align:center;
+        margin: 0 auto;
+        padding-top:50px;
+        margin-bottom: 50px;
+        font-size: 60px;
+        font-weight: 600;
+        font-family: sans-serif;
+        color: #fff;
+    }
+    .contact-wrapper
+    {
+        margin: 0 auto;
+        padding-top: 20px;
+        position: relative;
+        max-width:800px;
+    }
+    .form-horizontal
+    {
+        float: left;
+        max-width: 400px;
+        font-weight: 400;
+        font-family: monospace;
+    }
+    .form-group
+    {
+        margin-left: -15px;
+        margin-right:-15px;
+    }
+    .form-control
+    {
+        display: block;
+        width: 100%;
+        height: 34px;
+        margin-bottom: 20px;
+        padding:6px 12px;
+        font-size:14px;
+        line-height: 1.4;
+        color: #111;
+        background: #fff;
+        background-image:none ;
+        border:1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control :focus
+{
+    background: #111;
+}
+.form-control, textarea
+{
+    max-width: 400px;
+    background: #111;
+    height: auto;
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+.send-button
+{
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+.button 
+{
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+.button:hover
+{
+    transform: translate3d(0px, -29px, 0px);
+}
+.send-text
+{
+    display: block;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.contact-info
+{
+    max-width: 400px;
+    float: right;
+    margin-top: 5px;
+}
+.contact-list
+{
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+.list-item
+{
+    line-height: 4;
+    color: #aaa;
+}
+.contact-text
+{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.9px;
+    color: #bbb;
+}
+.contact-text a{
+    color: #bbb;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.contact-text a:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+.place
+{
+    margin-left: 62px;
+}
+hr{
+    border-color: rgba(255, 225, 225, 0.8);
+}
+.social-icons
+{
+    position: relative;
+    font-size: 2.3rem;
+    text-align: center;
+    width: 100%
+}
+.social-icons li{
+    position: relative;
+    top:0;
+    left: -20px;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    margin: 10px auto;
+    line-height: 70px;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(27, 27, 27);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.social-icons li:hover
+{
+    background: #fff;
+}
+.social-icons li::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 70px;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+}
+.social-icons li:hover:after
+{
+opacity: 1;
+transform:scale(1.12);
+transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+.social-icons li:hover a
+{
+    color: #111;
+}
+.social-icons li a{
+    color: #fff;
+}
+#abc
+{
+    display:none;
+    
+}
+@media all and (max-width:600px){
+    #abc{
+        display: block;
+    }
+}
+</style>
+</head>
+<body>
+    <section class="container" id="contact">
+        <h1 class="section-header">Contact Us</h1>
+        <div class="contact-wrapper">
+            <form class="form-horizontal" action="contact.html" method="POST" role="form">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" type="text" name="name" value="" placeholder="Name" id="name">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" type="text" name="email" value="" placeholder="Email" id="email">
+                </div>
+                </div>
+                <textarea name="Message" rows="10" placeholder="Message" class="form-control"></textarea>
+                <button class="btn btn-primary send-button" type="submit" name="button" id="submit">
+                <div class="button">
+                    <i class="fa fa-paper-plane"></i>
+                    <span class="send-text place">SEND</span>
+                </div>
+            </button>
+           </form>
+           <div class="contact-info">
+               <ul class="contact-list">
+                   <li class="list-item">
+                    <i class="fa fa-map-marker fa-2x"></i>
+                     <span class="contact-text fa-2x">Mumbai | India</span>
+                </li>  
+                </ul>
+                <hr>
+                <ul class="social-icons">
+                    <li>
+                        <a href="http://www.instagram.com/tanvi348">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:shahtanvi2909@gmail.com">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+               
+           </div>
+         </div>
+    </section>
+</body>
+</html>
